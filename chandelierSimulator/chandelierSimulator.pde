@@ -15,7 +15,9 @@ int RING_WIDTH = 8;
 float SPEED = 0.05;
 
 int NUM_RINGS = 5;
-int[] RING_BULBS = {95, 70, 50, 30, 15};
+int[] RING_BULBS = {
+  95, 70, 50, 30, 15
+};
 
 //int RING1_BULBS = 95;
 //int RING2_BULBS = 70;
@@ -55,11 +57,11 @@ void setup()
 
   rings = new Rings();
 
-  rings.addRing(MAX_RADIUS - (RING_WIDTH * 0),   RING_BULBS[0]);
+  rings.addRing(MAX_RADIUS - (RING_WIDTH * 0), RING_BULBS[0]);
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 1.5), RING_BULBS[1]);
-  rings.addRing(MAX_RADIUS - (RING_WIDTH * 3),   RING_BULBS[2]);
+  rings.addRing(MAX_RADIUS - (RING_WIDTH * 3), RING_BULBS[2]);
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 4.5), RING_BULBS[3]);
-  rings.addRing(MAX_RADIUS - (RING_WIDTH * 6),   RING_BULBS[4]);
+  rings.addRing(MAX_RADIUS - (RING_WIDTH * 6), RING_BULBS[4]);
 
   newImageQueue = new ArrayBlockingQueue(2);
 
@@ -106,8 +108,8 @@ void receive(byte[] data, String ip, int port) {
 void draw()
 {
   background(0);
-  
-  
+
+
 
   if (newImageQueue.size() > 0)
   {
@@ -115,20 +117,21 @@ void draw()
     rings.update(newImage);
     rings.draw();
   }
-  
+
   pCamera.beginHUD();
-  
+
   fill(255);
   rect(width - 80, 50, 55, 200);
-  
-  fill(0);
+
   for (int i = 0; i < NUM_RINGS; i++)
   {
-    rect((width - 100) + (10 * i) + 25, 60, 5, 180); 
+    fill(0);
+    rect((width - 100) + (10 * i) + 25, 60, 5, 180);
+    fill(255);
+    float y = map(rings.rings.get(i).sinSize, -1, 1, 235, 65);
+    rect((width - 100) + (10 * i) + 25, y, 5, 3);
   }
-  
+
   pCamera.endHUD();
-  
-  
 }
 

@@ -3,6 +3,7 @@ class Ring {
   float radius;
   int numBulbs;
   int ringData[];
+  float sinSize;
   
   Ring(float rad, int bulbs)
   {
@@ -29,6 +30,7 @@ class Ring {
 //    float radius = map(size, -1, 1, minRad, maxRad);
 //    float alpha = map(size, -1, 1, 100, 255);
 //    float bulbDiameter = map(size, -1, 1, 20 / 1.1, 20 * 1.1);
+    sinSize = size;
     lights();
     sphereDetail(SPHERE_FACETS);
     noStroke();
