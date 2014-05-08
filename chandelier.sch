@@ -2214,8 +2214,173 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Passives">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find resistors, capacitors, inductors, test points, jumper pads, etc.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="SJ_2S">
+<description>Small solder jumper with big paste layer so it will short during reflow.</description>
+<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.1524" layer="21"/>
+<wire x1="0.8" y1="1" x2="1.1" y2="0.75" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.1" y1="0.75" x2="-0.8" y2="1" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.1" y1="-0.75" x2="-0.8" y2="-1" width="0.1524" layer="21" curve="90.114706"/>
+<wire x1="0.8" y1="-1" x2="1.1" y2="-0.75" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.1" y1="-0.75" x2="1.1" y2="0.75" width="0.1524" layer="21"/>
+<wire x1="-1.1" y1="-0.75" x2="-1.1" y2="0.75" width="0.1524" layer="21"/>
+<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.1524" layer="21"/>
+<smd name="1" x="-0.4119" y="0" dx="0.635" dy="1.27" layer="1"/>
+<smd name="2" x="0.4119" y="0" dx="0.635" dy="1.27" layer="1"/>
+<text x="-0.9498" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-0.9498" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.2192" y1="-1.143" x2="1.2192" y2="1.143" layer="31"/>
+</package>
+<package name="SJ_2S-TRACE">
+<description>Solder jumper, small, shorted with trace. No paste layer. Trace is cuttable.</description>
+<wire x1="0.8255" y1="-1.016" x2="-0.8255" y2="-1.016" width="0.2032" layer="21"/>
+<wire x1="0.8255" y1="1.016" x2="1.0795" y2="0.762" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1.0795" y1="0.762" x2="-0.8255" y2="1.016" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1.0795" y1="-0.762" x2="-0.8255" y2="-1.016" width="0.2032" layer="21" curve="90"/>
+<wire x1="0.8255" y1="-1.016" x2="1.0795" y2="-0.762" width="0.2032" layer="21" curve="90"/>
+<wire x1="-0.8255" y1="1.016" x2="0.8255" y2="1.016" width="0.2032" layer="21"/>
+<wire x1="-0.381" y1="0" x2="0.381" y2="0" width="0.2032" layer="1"/>
+<smd name="1" x="-0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="-0.9525" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-0.9525" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+<package name="SJ_2S-NOTRACE">
+<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.2032" layer="21"/>
+<wire x1="0.8" y1="1" x2="1" y2="0.7" width="0.2032" layer="21" curve="-90.076445"/>
+<wire x1="-1" y1="0.7" x2="-0.8" y2="1" width="0.2032" layer="21" curve="-90.03821"/>
+<wire x1="-1" y1="-0.7" x2="-0.8" y2="-1" width="0.2032" layer="21" curve="90.03821"/>
+<wire x1="0.8" y1="-1" x2="1" y2="-0.7" width="0.2032" layer="21" curve="90.03821"/>
+<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.2032" layer="21"/>
+<smd name="1" x="-0.4009" y="0" dx="0.635" dy="1.27" layer="1" rot="R180" cream="no"/>
+<smd name="2" x="0.4127" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="-0.9525" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-0.9525" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.016" y1="-1.016" x2="1.016" y2="1.016" layer="31"/>
+</package>
+<package name="SJ_2S-NO">
+<description>Small solder jumper with no paste layer so it will open after reflow.</description>
+<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.2032" layer="21"/>
+<wire x1="0.8" y1="1" x2="1" y2="0.7" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1" y1="0.7" x2="-0.8" y2="1" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1" y1="-0.7" x2="-0.8" y2="-1" width="0.2032" layer="21" curve="90"/>
+<wire x1="0.8" y1="-1" x2="1" y2="-0.7" width="0.2032" layer="21" curve="90"/>
+<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.2032" layer="21"/>
+<smd name="1" x="-0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="-0.908" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-0.908" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="SJ">
+<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SOLDERJUMPER" prefix="SJ">
+<description>&lt;b&gt;Solder Jumper&lt;/b&gt;
+Standard SMD solder jumper. Used to automate production. Two varients : Normally Open and Normally Closed are the same, but have different paste layers. NC will have a large amount of paste and should jumper during reflow.</description>
+<gates>
+<gate name="1" symbol="SJ" x="0" y="0"/>
+</gates>
+<devices>
+<device name="NC" package="SJ_2S">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TRACE" package="SJ_2S-TRACE">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NC2" package="SJ_2S-NOTRACE">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NO" package="SJ_2S-NO">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="adafruit">
+<packages>
+<package name="FIDUCIAL_1MM">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<polygon width="0.127" layer="29">
+<vertex x="-1" y="0" curve="90"/>
+<vertex x="0" y="-1" curve="90"/>
+<vertex x="1" y="0" curve="90"/>
+<vertex x="0" y="1" curve="90"/>
+</polygon>
+<polygon width="0.127" layer="41">
+<vertex x="-1" y="0" curve="90"/>
+<vertex x="0" y="-1" curve="90"/>
+<vertex x="1" y="0" curve="90"/>
+<vertex x="0" y="1" curve="90"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="DOT">
+<circle x="0" y="0" radius="2.54" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FIDUCIAL">
+<description>For use by pick and place machines to calibrate the vision/machine, 1mm
+&lt;p&gt;By microbuilder.eu&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="DOT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FIDUCIAL_1MM">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
+<attribute name="DATABASE" value="../../control-surface/pcb/partsdb.txt"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -2225,10 +2390,18 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </class>
 </classes>
 <parts>
-<part name="IC1" library="Livestream" deviceset="NDC7002N-DUAL-MOS-N" device=""/>
-<part name="IC2" library="Livestream" deviceset="NDC7002N-DUAL-MOS-N" device=""/>
-<part name="IC3" library="Livestream" deviceset="NDC7002N-DUAL-MOS-N" device=""/>
-<part name="IC4" library="Livestream" deviceset="NDC7002N-DUAL-MOS-N" device=""/>
+<part name="IC1" library="Livestream" deviceset="NDC7002N-DUAL-MOS-N" device="">
+<attribute name="PARTNO" value="NDC7002N"/>
+</part>
+<part name="IC2" library="Livestream" deviceset="NDC7002N-DUAL-MOS-N" device="">
+<attribute name="PARTNO" value="NDC7002N"/>
+</part>
+<part name="IC3" library="Livestream" deviceset="NDC7002N-DUAL-MOS-N" device="">
+<attribute name="PARTNO" value="NDC7002N"/>
+</part>
+<part name="IC4" library="Livestream" deviceset="NDC7002N-DUAL-MOS-N" device="">
+<attribute name="PARTNO" value="NDC7002N"/>
+</part>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="J1" library="Livestream" deviceset="HEADER" device=""/>
 <part name="J2" library="Livestream" deviceset="HEADER" device=""/>
@@ -2239,35 +2412,55 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="J6" library="Livestream" deviceset="HEADER" device=""/>
 <part name="J5" library="Livestream" deviceset="HEADER" device=""/>
 <part name="\VAL" library="supply2" deviceset="VCC" device="" value="VCC24V"/>
-<part name="IC5" library="SparkFun-DigitalIC" deviceset="74*595" device=""/>
-<part name="IC6" library="Livestream" deviceset="RESISTOR-ARRAY-8" device=""/>
-<part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
+<part name="IC5" library="SparkFun-DigitalIC" deviceset="74*595" device="">
+<attribute name="PARTNO" value="74VHC595MTCX"/>
+</part>
+<part name="IC6" library="Livestream" deviceset="RESISTOR-ARRAY-8" device="">
+<attribute name="PARTNO" value="CAY16-103J8LF"/>
+</part>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="\VAL1" library="supply2" deviceset="VCC" device="" value="VCC3V3"/>
 <part name="\VAL2" library="supply2" deviceset="VCC" device="" value="VCC3V3"/>
 <part name="J9" library="Livestream" deviceset="HEADER" device=""/>
 <part name="\VAL3" library="supply2" deviceset="VCC" device="" value="VCC24V"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M06" device="SIP_LOCK"/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="M06" device="SIP_LOCK" value="INPUT"/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="\VAL4" library="supply2" deviceset="VCC" device="" value="VCC3V3"/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M06" device="SIP_LOCK"/>
+<part name="JP2" library="SparkFun-Connectors" deviceset="M06" device="SIP_LOCK" value="OUTPUT"/>
 <part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
 <part name="\VAL5" library="supply2" deviceset="VCC" device="" value="VCC3V3"/>
 <part name="J10" library="Livestream" deviceset="HEADER" device=""/>
 <part name="\VAL6" library="supply2" deviceset="VCC" device="" value="VCC24V"/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
-<part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="1uF"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="1uF">
+<attribute name="PARTNO" value="CL21B105KOFNNNE"/>
+</part>
+<part name="SJ1" library="SparkFun-Passives" deviceset="SOLDERJUMPER" device="TRACE" value="PULL DOWN"/>
+<part name="SJ2" library="SparkFun-Passives" deviceset="SOLDERJUMPER" device="NO" value="PULL UP"/>
+<part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
+<part name="\VAL7" library="supply2" deviceset="VCC" device="" value="VCC3V3"/>
+<part name="U$1" library="adafruit" deviceset="FIDUCIAL" device=""/>
+<part name="U$4" library="adafruit" deviceset="FIDUCIAL" device=""/>
+<part name="U$5" library="adafruit" deviceset="FIDUCIAL" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="IC1" gate="G$1" x="17.78" y="121.92"/>
-<instance part="IC2" gate="G$1" x="17.78" y="101.6"/>
-<instance part="IC3" gate="G$1" x="17.78" y="81.28"/>
-<instance part="IC4" gate="G$1" x="17.78" y="60.96"/>
+<instance part="IC1" gate="G$1" x="17.78" y="121.92">
+<attribute name="PARTNO" x="17.78" y="121.92" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="IC2" gate="G$1" x="17.78" y="101.6">
+<attribute name="PARTNO" x="17.78" y="101.6" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="IC3" gate="G$1" x="17.78" y="81.28">
+<attribute name="PARTNO" x="17.78" y="81.28" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="IC4" gate="G$1" x="17.78" y="60.96">
+<attribute name="PARTNO" x="17.78" y="60.96" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="SUPPLY1" gate="GND" x="35.56" y="43.18"/>
 <instance part="J1" gate="G$1" x="-27.94" y="124.46"/>
 <instance part="J2" gate="G$1" x="-27.94" y="114.3"/>
@@ -2278,9 +2471,12 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="J6" gate="G$1" x="-27.94" y="73.66"/>
 <instance part="J5" gate="G$1" x="-27.94" y="83.82"/>
 <instance part="\VAL" gate="G$1" x="-12.7" y="134.62"/>
-<instance part="IC5" gate="A" x="-22.86" y="172.72"/>
-<instance part="IC6" gate="G$1" x="33.02" y="172.72"/>
-<instance part="SUPPLY3" gate="GND" x="48.26" y="157.48"/>
+<instance part="IC5" gate="A" x="-22.86" y="172.72">
+<attribute name="PARTNO" x="-22.86" y="172.72" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="IC6" gate="G$1" x="33.02" y="172.72">
+<attribute name="PARTNO" x="33.02" y="172.72" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="SUPPLY4" gate="GND" x="-38.1" y="152.4"/>
 <instance part="\VAL1" gate="G$1" x="-5.08" y="190.5"/>
 <instance part="\VAL2" gate="G$1" x="-40.64" y="190.5"/>
@@ -2296,7 +2492,16 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="J10" gate="G$1" x="48.26" y="198.12"/>
 <instance part="\VAL6" gate="G$1" x="63.5" y="208.28"/>
 <instance part="SUPPLY7" gate="GND" x="63.5" y="190.5"/>
-<instance part="C1" gate="G$1" x="5.08" y="172.72"/>
+<instance part="C1" gate="G$1" x="5.08" y="172.72">
+<attribute name="PARTNO" x="5.08" y="172.72" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="SJ1" gate="1" x="55.88" y="162.56"/>
+<instance part="SJ2" gate="1" x="55.88" y="170.18"/>
+<instance part="SUPPLY3" gate="GND" x="66.04" y="157.48"/>
+<instance part="\VAL7" gate="G$1" x="66.04" y="180.34"/>
+<instance part="U$1" gate="G$1" x="-132.08" y="195.58"/>
+<instance part="U$4" gate="G$1" x="-124.46" y="185.42"/>
+<instance part="U$5" gate="G$1" x="-116.84" y="175.26"/>
 </instances>
 <busses>
 </busses>
@@ -2337,40 +2542,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <junction x="35.56" y="55.88"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="1"/>
-<pinref part="SUPPLY3" gate="GND" pin="GND"/>
-<wire x1="40.64" y1="180.34" x2="48.26" y2="180.34" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="180.34" x2="48.26" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="3"/>
-<wire x1="48.26" y1="177.8" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="175.26" x2="48.26" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="172.72" x2="48.26" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="170.18" x2="48.26" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="167.64" x2="48.26" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="165.1" x2="48.26" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="162.56" x2="48.26" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="177.8" x2="48.26" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="5"/>
-<wire x1="40.64" y1="175.26" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="7"/>
-<wire x1="40.64" y1="172.72" x2="48.26" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="9"/>
-<wire x1="40.64" y1="170.18" x2="48.26" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="11"/>
-<wire x1="40.64" y1="167.64" x2="48.26" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="15"/>
-<wire x1="40.64" y1="162.56" x2="48.26" y2="162.56" width="0.1524" layer="91"/>
-<junction x="48.26" y="162.56"/>
-<junction x="48.26" y="167.64"/>
-<junction x="48.26" y="170.18"/>
-<junction x="48.26" y="172.72"/>
-<junction x="48.26" y="175.26"/>
-<junction x="48.26" y="177.8"/>
-<pinref part="IC6" gate="G$1" pin="13"/>
-<wire x1="40.64" y1="165.1" x2="48.26" y2="165.1" width="0.1524" layer="91"/>
-<junction x="48.26" y="165.1"/>
-</segment>
-<segment>
 <pinref part="IC5" gate="A" pin="GND"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 <wire x1="-33.02" y1="160.02" x2="-38.1" y2="160.02" width="0.1524" layer="91"/>
@@ -2403,6 +2574,12 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
 <wire x1="55.88" y1="198.12" x2="63.5" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="198.12" x2="63.5" y2="193.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SJ1" gate="1" pin="2"/>
+<pinref part="SUPPLY3" gate="GND" pin="GND"/>
+<wire x1="60.96" y1="162.56" x2="66.04" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="162.56" x2="66.04" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC24V" class="0">
@@ -2702,6 +2879,12 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="-68.58" y1="124.46" x2="-73.66" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="124.46" x2="-73.66" y2="111.76" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="SJ2" gate="1" pin="2"/>
+<pinref part="\VAL7" gate="G$1" pin="VCC"/>
+<wire x1="60.96" y1="170.18" x2="66.04" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="170.18" x2="66.04" y2="177.8" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="G" class="0">
 <segment>
@@ -2766,9 +2949,60 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <label x="-35.56" y="182.88" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="IC6" gate="G$1" pin="1"/>
+<wire x1="40.64" y1="180.34" x2="48.26" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="180.34" x2="48.26" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="3"/>
+<wire x1="48.26" y1="177.8" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="175.26" x2="48.26" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="172.72" x2="48.26" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="170.18" x2="48.26" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="167.64" x2="48.26" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="165.1" x2="48.26" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="177.8" x2="48.26" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="5"/>
+<wire x1="40.64" y1="175.26" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="7"/>
+<wire x1="40.64" y1="172.72" x2="48.26" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="9"/>
+<wire x1="40.64" y1="170.18" x2="48.26" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="11"/>
+<wire x1="40.64" y1="167.64" x2="48.26" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="15"/>
+<wire x1="40.64" y1="162.56" x2="48.26" y2="162.56" width="0.1524" layer="91"/>
+<junction x="48.26" y="167.64"/>
+<junction x="48.26" y="170.18"/>
+<junction x="48.26" y="172.72"/>
+<junction x="48.26" y="175.26"/>
+<junction x="48.26" y="177.8"/>
+<pinref part="IC6" gate="G$1" pin="13"/>
+<wire x1="40.64" y1="165.1" x2="48.26" y2="165.1" width="0.1524" layer="91"/>
+<junction x="48.26" y="165.1"/>
+<pinref part="SJ2" gate="1" pin="1"/>
+<wire x1="48.26" y1="170.18" x2="50.8" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="SJ1" gate="1" pin="1"/>
+<wire x1="48.26" y1="162.56" x2="50.8" y2="162.56" width="0.1524" layer="91"/>
+<junction x="48.26" y="162.56"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="102,1,-12.7,132.08,VCC,VCC24V,,,,"/>
+<approved hash="102,1,-5.08,187.96,VCC,VCC3V3,,,,"/>
+<approved hash="102,1,-40.64,187.96,VCC,VCC3V3,,,,"/>
+<approved hash="102,1,40.64,205.74,VCC,VCC24V,,,,"/>
+<approved hash="102,1,-58.42,187.96,VCC,VCC3V3,,,,"/>
+<approved hash="102,1,-73.66,111.76,VCC,VCC3V3,,,,"/>
+<approved hash="102,1,63.5,205.74,VCC,VCC24V,,,,"/>
+<approved hash="102,1,66.04,177.8,VCC,VCC3V3,,,,"/>
+<approved hash="104,1,-7.62,182.88,IC5,VCC,VCC3V3,,,"/>
+<approved hash="113,1,-66.7173,170.375,JP1,,,,,"/>
+<approved hash="113,1,-65.3627,129.345,JP2,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
