@@ -26,7 +26,7 @@ module ring(radius, z, numBulbs) {
 }
 
 ring(maxRadius, 0, 52); // 13 elements
-ring(maxRadius - (ringWidth * 1.75), -10, 40); // 10 elements
-ring(maxRadius - (ringWidth * 3.5), -25, 28); // 7 elements
-ring(maxRadius - (ringWidth * 5.4), -40, 16); // 4 elements?
+ring(maxRadius - (ringWidth * 1.75), -10, 40); // 47.665 10 elements
+ring(maxRadius - (ringWidth * 3.5), -25, 28); // 34.33 8 elements
+ring(maxRadius - (ringWidth * 5.4), -40, 16); // 19.852 4 elements?
 //ring(maxRadius - (ringWidth * 6), -55, 15);
