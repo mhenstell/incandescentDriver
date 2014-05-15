@@ -37,7 +37,8 @@ class Rings
   {
     for (int i = 0; i < rings.size(); i++)
     {
-      rings.get(i).draw(sin(x + (30 * i)));
+//      rings.get(i).draw(sin(x + (30 * i)));
+        rings.get(i).draw(0);
     }
 
     x += SPEED;
