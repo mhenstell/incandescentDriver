@@ -32,21 +32,22 @@ DemoTransmitter demoTransmitter;
 void setup()
 {
   //  frameRate(10);
-  size(640, 480, OPENGL);
+//  size(640, 480, OPENGL);
+  size(640, 480);
   colorMode(RGB, 255);
 
   //  smooth();
 
-  pCamera = new PeasyCam(this, 100);
-  pCamera.setMinimumDistance(10);
-  pCamera.setMaximumDistance(400);
-  //  pCamera.setSuppressRollRotationMode();
-  //  pCamera.rotateX(-.4);
-
-  pCamera.setWheelScale(0.01);
-
-  pCamera.lookAt(316, 243, -100);
-  pCamera.setDistance(200);
+//  pCamera = new PeasyCam(this, 100);
+//  pCamera.setMinimumDistance(10);
+//  pCamera.setMaximumDistance(400);
+//  //  pCamera.setSuppressRollRotationMode();
+//  //  pCamera.rotateX(-.4);
+//
+//  pCamera.setWheelScale(0.01);
+//
+//  pCamera.lookAt(316, 243, -100);
+//  pCamera.setDistance(200);
   
   for (int i = 0; i < NUM_RINGS; i++)
   {

@@ -8,7 +8,7 @@ class Ring {
   Ring(float rad, int bulbs)
   {
 
-    radius = rad;
+    radius = rad * 6;
     numBulbs = bulbs;
     ringData = new int[numBulbs];
   }
