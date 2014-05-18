@@ -1,10 +1,6 @@
-import peasy.*;
-import javax.media.opengl.GL;
-import processing.opengl.*;
 import java.util.concurrent.*;
 import hypermedia.net.*;
 
-PeasyCam pCamera;
 UDP udp;
 
 int HEIGHT_RANGE = 10;
@@ -28,52 +24,57 @@ Rings rings;
 Boolean demoMode = true;
 DemoTransmitter demoTransmitter;
 
+int maxConvertedByte = 0;
+
+int convertByte(byte b) {
+  int c = (b<0) ? 256+b : b;
+
+  if (c > maxConvertedByte) {
+    maxConvertedByte = c;
+    println("Max Converted Byte is now " + c);
+  }  
+  
+  return c;
+}
 
 void setup()
 {
   //  frameRate(10);
-//  size(640, 480, OPENGL);
+  //  size(640, 480, OPENGL);
   size(640, 480);
   colorMode(RGB, 255);
 
-  //  smooth();
+  smooth();
 
-//  pCamera = new PeasyCam(this, 100);
-//  pCamera.setMinimumDistance(10);
-//  pCamera.setMaximumDistance(400);
-//  //  pCamera.setSuppressRollRotationMode();
-//  //  pCamera.rotateX(-.4);
-//
-//  pCamera.setWheelScale(0.01);
-//
-//  pCamera.lookAt(316, 243, -100);
-//  pCamera.setDistance(200);
-  
   for (int i = 0; i < NUM_RINGS; i++)
   {
     NUM_BULBS += RING_BULBS[i];
   }
-  
+
   PACKET_LENGTH = NUM_BULBS + 1;
 
-  
   rings = new Rings();
 
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 0), RING_BULBS[0]);
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 1.5), RING_BULBS[1]);
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 3), RING_BULBS[2]);
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 4.5), RING_BULBS[3]);
-//  rings.addRing(MAX_RADIUS - (RING_WIDTH * 6), RING_BULBS[4]);
+  //  rings.addRing(MAX_RADIUS - (RING_WIDTH * 6), RING_BULBS[4]);
 
   newImageQueue = new ArrayBlockingQueue(2);
 
+  udp = new UDP( this, 58082 );
+  udp.listen( true );
 
-  demoTransmitter = new DemoTransmitter();
-  demoTransmitter.start();
+
+  //  demoTransmitter = new DemoTransmitter();
+  //  demoTransmitter.start();
+
+  background(0);
 }
 
 void receive(byte[] data, String ip, int port) {  
-  //println(" new datas!");
+//  println(" new datas!");
 
   if (demoMode)
   {
@@ -93,11 +94,11 @@ void receive(byte[] data, String ip, int port) {
     println("Buffer full, dropping frame!");
     return;
   }
-
+  
   int[] newImage = new int[NUM_BULBS];
 
-  for (int i=0; i< NUM_BULBS; i++) {
-    newImage[i] = data[i + 1];
+  for (int i=1; i< NUM_BULBS; i++) {
+    newImage[i] = convertByte(data[i + 1]);
   }
   try { 
     newImageQueue.put(newImage);
@@ -109,31 +110,14 @@ void receive(byte[] data, String ip, int port) {
 
 void draw()
 {
-  background(0);
-
 
 
   if (newImageQueue.size() > 0)
   {
+    background(0);
     int[] newImage = (int[])newImageQueue.remove();
     rings.update(newImage);
     rings.draw();
   }
-
-//  pCamera.beginHUD();
-//
-//  fill(255);
-//  rect(width - 80, 50, 55, 200);
-//
-//  for (int i = 0; i < NUM_RINGS; i++)
-//  {
-//    fill(0);
-//    rect((width - 100) + (10 * i) + 25, 60, 5, 180);
-//    fill(255);
-//    float y = map(rings.rings.get(i).sinSize, -1, 1, 235, 65);
-//    rect((width - 100) + (10 * i) + 25, y, 5, 3);
-//  }
-//
-//  pCamera.endHUD();
 }
 

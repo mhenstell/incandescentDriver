@@ -16,7 +16,10 @@ class Rings
 
   void update(int[] newImage)
   {
-    int startNum = 1;
+    
+//    println(newImage.length);
+    
+    int startNum = 0;
     for (int i = 0; i < rings.size(); i++)
     {  
       int numBulbs = rings.get(i).numBulbs;
@@ -37,8 +40,7 @@ class Rings
   {
     for (int i = 0; i < rings.size(); i++)
     {
-//      rings.get(i).draw(sin(x + (30 * i)));
-        rings.get(i).draw(0);
+        rings.get(i).draw();
     }
 
     x += SPEED;
