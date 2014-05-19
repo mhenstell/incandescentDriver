@@ -10,9 +10,9 @@ int MAX_RADIUS = 61;
 int RING_WIDTH = 8;
 float SPEED = 0.05;
 
-int NUM_RINGS = 4;
+int NUM_RINGS = 5;
 int[] RING_BULBS = {
-  52, 40, 32, 24
+  52, 40, 32, 24, 1
 };
 
 int NUM_BULBS = 0;
@@ -42,7 +42,7 @@ Routine currentRoutine = null;
 
 void setup()
 {
-  //  frameRate(10);
+//  frameRate(10);
   size(400, 400);
   colorMode(RGB, 255);
 
@@ -61,6 +61,7 @@ void setup()
   ringss.addRing(MAX_RADIUS - (RING_WIDTH * 1.5), RING_BULBS[1]);
   ringss.addRing(MAX_RADIUS - (RING_WIDTH * 3), RING_BULBS[2]);
   ringss.addRing(MAX_RADIUS - (RING_WIDTH * 4.5), RING_BULBS[3]);
+  ringss.addRing(0, RING_BULBS[4]);
   //  rings.addRing(MAX_RADIUS - (RING_WIDTH * 6), RING_BULBS[4]);
   
   currentRoutine = enabledRoutines[5];

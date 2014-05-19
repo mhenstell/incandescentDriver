@@ -17,6 +17,7 @@ class CircularWaves extends Routine {
     {
       int brightness = int(map(sin(radians(x + (i * frequency))), -1, 1, 0, 255));
       noFill();
+      if (i == 1) fill(brightness);
       stroke(brightness);
       strokeWeight(8);
       ellipse(width / 2, height / 2, i * 16, i * 16);
