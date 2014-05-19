@@ -10,9 +10,9 @@ int MAX_RADIUS = 61;
 int RING_WIDTH = 8;
 float SPEED = 0.05;
 
-int NUM_RINGS = 4;
+int NUM_RINGS = 5;
 int[] RING_BULBS = {
-  52, 40, 32, 24
+  52, 40, 32, 24, 1
 };
 
 int NUM_BULBS = 0;
@@ -59,6 +59,7 @@ void setup()
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 1.5), RING_BULBS[1]);
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 3), RING_BULBS[2]);
   rings.addRing(MAX_RADIUS - (RING_WIDTH * 4.5), RING_BULBS[3]);
+  rings.addRing(0, 1);
   //  rings.addRing(MAX_RADIUS - (RING_WIDTH * 6), RING_BULBS[4]);
 
   newImageQueue = new ArrayBlockingQueue(2);

@@ -23,7 +23,7 @@ Rings ringss;
 int x = 0;
 
 String transmit_address = "127.0.0.1";
-int transmit_port       = 58082;
+int transmit_port       = 4000;
 
 int CIRCULAR = 0;
 int RANDOM = 1;
