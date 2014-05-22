@@ -161,41 +161,48 @@
 <rectangle x1="-1.2" y1="0.8" x2="-0.7" y2="1.5" layer="51" rot="R180"/>
 </package>
 <package name="1X02-5.08-SCREWTERM">
-<pad name="P1" x="-2.54" y="0" drill="1.016" shape="square"/>
-<pad name="P2" x="2.54" y="0" drill="1.016" shape="square"/>
-<wire x1="-4" y1="3.25" x2="4" y2="3.25" width="0.127" layer="21"/>
-<wire x1="4" y1="3.25" x2="4" y2="2.5" width="0.127" layer="21"/>
-<wire x1="4" y1="2.5" x2="4" y2="-3.25" width="0.127" layer="21"/>
-<wire x1="4" y1="-3.25" x2="-4" y2="-3.25" width="0.127" layer="21"/>
-<wire x1="-4" y1="-3.25" x2="-4" y2="2.5" width="0.127" layer="21"/>
-<wire x1="-4" y1="2.5" x2="-4" y2="3.25" width="0.127" layer="21"/>
-<wire x1="-4" y1="2.5" x2="4" y2="2.5" width="0.127" layer="21"/>
-<text x="-0.54" y="3.5" size="1.016" layer="25">&gt;NAME</text>
-<text x="-1.04" y="-4.5" size="1.016" layer="27">&gt;VALUE</text>
+<pad name="P1" x="-2.54" y="0" drill="1.016" diameter="1.778" shape="square"/>
+<pad name="P2" x="2.54" y="0" drill="1.016" diameter="1.778" shape="square"/>
+<wire x1="-5" y1="4" x2="0" y2="4" width="0.127" layer="21"/>
+<wire x1="0" y1="4" x2="5" y2="4" width="0.127" layer="21"/>
+<wire x1="5" y1="4" x2="5" y2="3.5" width="0.127" layer="21"/>
+<wire x1="5" y1="3.5" x2="5" y2="3" width="0.127" layer="21"/>
+<wire x1="5" y1="3" x2="5" y2="-3.25" width="0.127" layer="21"/>
+<wire x1="5" y1="-3.25" x2="-5" y2="-3.25" width="0.127" layer="21"/>
+<wire x1="-5" y1="-3.25" x2="-5" y2="3" width="0.127" layer="21"/>
+<wire x1="-5" y1="3" x2="-5" y2="4" width="0.127" layer="21"/>
+<wire x1="-5" y1="3" x2="0" y2="3" width="0.127" layer="21"/>
+<text x="-4.94" y="4.5" size="1.016" layer="25">&gt;NAME</text>
+<text x="-5.04" y="-4.7" size="1.016" layer="27">&gt;VALUE</text>
+<wire x1="0" y1="3" x2="5" y2="3" width="0.127" layer="21"/>
+<wire x1="0" y1="4" x2="0" y2="3" width="0.127" layer="21"/>
+<wire x1="5" y1="3.5" x2="5.5" y2="3.5" width="0.127" layer="21"/>
+<wire x1="5.5" y1="3.5" x2="5.5" y2="3" width="0.127" layer="21"/>
+<wire x1="5.5" y1="3" x2="5" y2="3" width="0.127" layer="21"/>
 </package>
 <package name="CAY16-103J8">
-<smd name="1" x="-2.8" y="-0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="3" x="-2" y="-0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="5" x="-1.2" y="-0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="7" x="-0.4" y="-0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="9" x="0.4" y="-0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="11" x="1.2" y="-0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="13" x="2" y="-0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="15" x="2.8" y="-0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="2" x="-2.8" y="0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="4" x="-2" y="0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="6" x="-1.2" y="0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="8" x="-0.4" y="0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="10" x="0.4" y="0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="12" x="1.2" y="0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="14" x="2" y="0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<smd name="16" x="2.8" y="0.75" dx="0.8" dy="0.425" layer="1" rot="R90"/>
-<wire x1="-3.2" y1="0.6" x2="3.2" y2="0.6" width="0.1" layer="21"/>
-<wire x1="3.2" y1="0.6" x2="3.2" y2="-0.6" width="0.1" layer="21"/>
-<wire x1="3.2" y1="-0.6" x2="-3.2" y2="-0.6" width="0.1" layer="21"/>
-<wire x1="-3.2" y1="-0.6" x2="-3.2" y2="0.6" width="0.1" layer="21"/>
-<text x="-3.6" y="-1.8" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
-<text x="4.4" y="-1.8" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
+<smd name="1" x="-1.75" y="-0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="3" x="-1.25" y="-0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="5" x="-0.75" y="-0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="7" x="-0.25" y="-0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="9" x="0.25" y="-0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="11" x="0.75" y="-0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="13" x="1.25" y="-0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="15" x="1.75" y="-0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="2" x="-1.75" y="0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="4" x="-1.25" y="0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="6" x="-0.75" y="0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="8" x="-0.25" y="0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="10" x="0.25" y="0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="12" x="0.75" y="0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="14" x="1.25" y="0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="16" x="1.75" y="0.75" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<wire x1="-1.9" y1="0.6" x2="1.9" y2="0.6" width="0.1" layer="21"/>
+<wire x1="1.9" y1="0.6" x2="1.9" y2="-0.6" width="0.1" layer="21"/>
+<wire x1="1.9" y1="-0.6" x2="-1.9" y2="-0.6" width="0.1" layer="21"/>
+<wire x1="-1.9" y1="-0.6" x2="-1.9" y2="0.6" width="0.1" layer="21"/>
+<text x="-2.4" y="-2" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.1" y="-2" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -2385,8 +2392,11 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.254" drill="0.3302">
-<clearance class="0" value="0.2032"/>
+<class number="0" name="default" width="0.1524" drill="0.3302">
+<clearance class="0" value="0.1524"/>
+</class>
+<class number="1" name="power" width="0.254" drill="0.3302">
+<clearance class="1" value="0.1524"/>
 </class>
 </classes>
 <parts>
@@ -2506,7 +2516,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <busses>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="IC4" gate="G$1" pin="S2"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
@@ -2582,7 +2592,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="66.04" y1="162.56" x2="66.04" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VCC24V" class="0">
+<net name="VCC24V" class="1">
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
 <pinref part="\VAL" gate="G$1" pin="VCC"/>
@@ -2630,7 +2640,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="63.5" y1="200.66" x2="63.5" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="N$1" class="1">
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="124.46" x2="-10.16" y2="124.46" width="0.1524" layer="91"/>
@@ -2639,7 +2649,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="-10.16" y1="119.38" x2="5.08" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="N$2" class="1">
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="114.3" x2="-10.16" y2="114.3" width="0.1524" layer="91"/>
@@ -2648,7 +2658,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="-10.16" y1="116.84" x2="5.08" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="N$3" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="104.14" x2="-10.16" y2="104.14" width="0.1524" layer="91"/>
@@ -2657,7 +2667,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="-10.16" y1="99.06" x2="5.08" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="N$4" class="1">
 <segment>
 <pinref part="J4" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="93.98" x2="-10.16" y2="93.98" width="0.1524" layer="91"/>
@@ -2666,7 +2676,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="-10.16" y1="96.52" x2="5.08" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="N$5" class="1">
 <segment>
 <pinref part="J5" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="83.82" x2="-10.16" y2="83.82" width="0.1524" layer="91"/>
@@ -2675,7 +2685,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="-10.16" y1="78.74" x2="5.08" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="N$6" class="1">
 <segment>
 <pinref part="J6" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="73.66" x2="-10.16" y2="73.66" width="0.1524" layer="91"/>
@@ -2684,7 +2694,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="-10.16" y1="76.2" x2="5.08" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="N$7" class="1">
 <segment>
 <pinref part="J7" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="63.5" x2="-10.16" y2="63.5" width="0.1524" layer="91"/>
@@ -2693,7 +2703,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="-10.16" y1="58.42" x2="5.08" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="N$8" class="1">
 <segment>
 <pinref part="J8" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="53.34" x2="-10.16" y2="53.34" width="0.1524" layer="91"/>
