@@ -15,13 +15,10 @@ ringInterface = "/dev/tty.usbmodem12341"
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((host,port))
 
-with serial.Serial(ringInterface, 115200, timeout=0) as ser:
+q = 0
 
-	# while True:
-	# 	data, addr = sock.recvfrom(buffer_size)
-	# 	if ord(data[0]) != 1:
-	# 		print "RX Error"
-	# 		continue
+
+with serial.Serial(ringInterface, 115200, timeout=0) as ser:
 
 	# 	ringData = data[1:-1]
 	# 	bulbData = data[-1]
@@ -36,21 +33,46 @@ with serial.Serial(ringInterface, 115200, timeout=0) as ser:
 
 	# 	print "sending"
 
-	q = 0
+	try:
+		while True:
 
-	while True:
+			# # sin wave
+			# ringData = [0 for x in range(0, 148)]
+			# for x in range(0, 148):
+			# 	sin = math.sin(x + q)
+			# 	ringData[x] = int(interp(sin, [-1, 1], [0, 255]))
+			# data = ringData[0:24]
+			# ser.write(data)
+			# q += 0.1
 
-		ringData = [0 for x in range(0, 148)]
-		
-		for x in range(0, 148):
-			sin = math.sin(x + q)
-			ringData[x] = int(interp(sin, [-1, 1], [0, 255]))
+			data, addr = sock.recvfrom(buffer_size)
+			if ord(data[0]) != 1:
+				print "RX Error"
+				continue
 
-		data = ringData[0:4]
+			ringData = data[1:-1]
+			bulbData = data[-1]
 
-		ser.write(data)
+			ring4data = ringData[124:148]
 
-		q += 0.1
+			ser.write(ring4data)
+
+
+	except Exception as e:
+		print e
+
+	finally:
+		try:
+			print "\tZeroing out"
+			for _ in range(0, 10):
+				data = [0 for x in range(0, 24)]
+				ser.write(data)
+			print "Done"
+		except:
+			pass
+
+
+
 
 
 		
