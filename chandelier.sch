@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2392,10 +2392,10 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.1524" drill="0.3302">
+<class number="0" name="default" width="0.1524" drill="0.381">
 <clearance class="0" value="0.1524"/>
 </class>
-<class number="1" name="power" width="0.254" drill="0.3302">
+<class number="1" name="power" width="0.254" drill="0.381">
 <clearance class="1" value="0.1524"/>
 </class>
 </classes>
@@ -2580,16 +2580,18 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="-73.66" y1="137.16" x2="-73.66" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$1" pin="1"/>
-<pinref part="SUPPLY7" gate="GND" pin="GND"/>
-<wire x1="55.88" y1="198.12" x2="63.5" y2="198.12" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="198.12" x2="63.5" y2="193.04" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="SJ1" gate="1" pin="2"/>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
 <wire x1="60.96" y1="162.56" x2="66.04" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="162.56" x2="66.04" y2="160.02" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J10" gate="G$1" pin="2"/>
+<wire x1="55.88" y1="200.66" x2="58.42" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="200.66" x2="58.42" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="195.58" x2="63.5" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="SUPPLY7" gate="GND" pin="GND"/>
+<wire x1="63.5" y1="195.58" x2="63.5" y2="193.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC24V" class="1">
@@ -2634,10 +2636,10 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="40.64" y1="200.66" x2="40.64" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$1" pin="2"/>
+<pinref part="J10" gate="G$1" pin="1"/>
 <pinref part="\VAL6" gate="G$1" pin="VCC"/>
-<wire x1="55.88" y1="200.66" x2="63.5" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="200.66" x2="63.5" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="198.12" x2="63.5" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="198.12" x2="63.5" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="1">
@@ -3007,11 +3009,8 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <approved hash="102,1,40.64,205.74,VCC,VCC24V,,,,"/>
 <approved hash="102,1,-58.42,187.96,VCC,VCC3V3,,,,"/>
 <approved hash="102,1,-73.66,111.76,VCC,VCC3V3,,,,"/>
-<approved hash="102,1,63.5,205.74,VCC,VCC24V,,,,"/>
 <approved hash="102,1,66.04,177.8,VCC,VCC3V3,,,,"/>
 <approved hash="104,1,-7.62,182.88,IC5,VCC,VCC3V3,,,"/>
-<approved hash="113,1,-66.7173,170.375,JP1,,,,,"/>
-<approved hash="113,1,-65.3627,129.345,JP2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
