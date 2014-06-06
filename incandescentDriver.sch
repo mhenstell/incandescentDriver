@@ -3671,9 +3671,48 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="bom">
+<description>&lt;b&gt;BOM-EX Helper&lt;/b&gt;&lt;p&gt;
+Symbols to allow specifying additional part numbers to be added to the bill-of-materials listing for bom-ex.
+&lt;p&gt;THIS LIBRARY IS PROVIDED AS IS AND WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED.&lt;br&gt;
+USE AT YOUR OWN RISK!&lt;p&gt;
+&lt;author&gt;Copyright (C) 2010, Bob Starr&lt;br&gt; http://www.bobstarr.net&lt;br&gt;&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="BOM-ENTRY">
+<wire x1="0" y1="1.905" x2="20.32" y2="1.905" width="0.254" layer="94"/>
+<wire x1="20.32" y1="1.905" x2="20.32" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-1.905" x2="0" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.905" x2="0" y2="1.905" width="0.254" layer="94"/>
+<text x="1.27" y="-0.9525" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.27" y="-4.445" size="1.778" layer="95">&gt;VALUE</text>
+<text x="1.27" y="3.175" size="1.778" layer="95">&gt;DESC</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BOM-ENTRY" prefix="BOM-ENTRY">
+<description>&lt;b&gt;BOM ENTRY&lt;/b&gt;&lt;p&gt;
+Special BOM entry-only specifier field.</description>
+<gates>
+<gate name="G$1" symbol="BOM-ENTRY" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name="">
+<attribute name="DESC" value="" constant="no"/>
+<attribute name="PARTNO" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
-<attribute name="DATABASE" value="../../control-surface/pcb/partsdb.txt"/>
+<attribute name="DATABASE" value="../partsdb.txt"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -3686,55 +3725,99 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </class>
 </classes>
 <parts>
-<part name="J1" library="Livestream" deviceset="HEADER" device=""/>
-<part name="J2" library="Livestream" deviceset="HEADER" device=""/>
-<part name="J3" library="Livestream" deviceset="HEADER" device=""/>
-<part name="J4" library="Livestream" deviceset="HEADER" device=""/>
+<part name="J1" library="Livestream" deviceset="HEADER" device="">
+<attribute name="PARTNO" value="OSTTC022162"/>
+</part>
+<part name="J2" library="Livestream" deviceset="HEADER" device="">
+<attribute name="PARTNO" value="OSTTC022162"/>
+</part>
+<part name="J3" library="Livestream" deviceset="HEADER" device="">
+<attribute name="PARTNO" value="OSTTC022162"/>
+</part>
+<part name="J4" library="Livestream" deviceset="HEADER" device="">
+<attribute name="PARTNO" value="OSTTC022162"/>
+</part>
 <part name="\VAL" library="supply2" deviceset="VCC" device="" value="VCC24V"/>
 <part name="IC5" library="SparkFun-DigitalIC" deviceset="74*595" device="N" technology="LS" value="74LS595N">
-<attribute name="PARTNO" value="74VHC595MTCX"/>
+<attribute name="PARTNO" value="SN74HC164N"/>
 </part>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="\VAL1" library="supply2" deviceset="VCC" device="" value="VCC"/>
 <part name="\VAL2" library="supply2" deviceset="VCC" device="" value="VCC"/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
-<part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="PTH" value="1uF">
-<attribute name="PARTNO" value="CL21B105KOFNNNE"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="PTH" value="0.1uF">
+<attribute name="PARTNO" value="SR295E104MAR"/>
 </part>
-<part name="JP3" library="SparkFun-Connectors" deviceset="M05" device="LOCK"/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M05" device="LOCK"/>
+<part name="JP3" library="SparkFun-Connectors" deviceset="M05" device="LOCK">
+<attribute name="PARTNO" value="M20-9960545"/>
+</part>
+<part name="JP1" library="SparkFun-Connectors" deviceset="M05" device="LOCK">
+<attribute name="PARTNO" value="M20-9960545"/>
+</part>
 <part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
-<part name="J11" library="SparkFun-Connectors" deviceset="POWER_JACK" device="PTH_LOCK"/>
+<part name="J11" library="SparkFun-Connectors" deviceset="POWER_JACK" device="PTH_LOCK">
+<attribute name="PARTNO" value="PJ-202A"/>
+</part>
 <part name="\VAL3" library="supply2" deviceset="VCC" device="" value="VCC24V"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="J9" library="Livestream" deviceset="HEADER" device="">
 <attribute name="DNP" value="T"/>
+<attribute name="PARTNO" value="OSTTC022162"/>
 </part>
 <part name="J10" library="Livestream" deviceset="HEADER" device="">
 <attribute name="DNP" value="T"/>
+<attribute name="PARTNO" value="OSTTC022162"/>
 </part>
 <part name="\VAL4" library="supply2" deviceset="VCC" device="" value="VCC24V"/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
-<part name="R1" library="SparkFun-Connectors" deviceset="M10" device="LOCK"/>
+<part name="R1" library="SparkFun-Connectors" deviceset="M10" device="LOCK" value="10K">
+<attribute name="PARTNO" value="L101S103LF"/>
+</part>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
-<part name="Q2" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV"/>
-<part name="Q1" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV"/>
-<part name="Q4" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV"/>
-<part name="Q3" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV"/>
+<part name="Q2" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV">
+<attribute name="PARTNO" value="FQP13N10L"/>
+</part>
+<part name="Q1" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV">
+<attribute name="PARTNO" value="FQP13N10L"/>
+</part>
+<part name="Q4" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV">
+<attribute name="PARTNO" value="FQP13N10L"/>
+</part>
+<part name="Q3" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV">
+<attribute name="PARTNO" value="FQP13N10L"/>
+</part>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
-<part name="J5" library="Livestream" deviceset="HEADER" device=""/>
-<part name="J6" library="Livestream" deviceset="HEADER" device=""/>
-<part name="J7" library="Livestream" deviceset="HEADER" device=""/>
-<part name="J8" library="Livestream" deviceset="HEADER" device=""/>
+<part name="J5" library="Livestream" deviceset="HEADER" device="">
+<attribute name="PARTNO" value="OSTTC022162"/>
+</part>
+<part name="J6" library="Livestream" deviceset="HEADER" device="">
+<attribute name="PARTNO" value="OSTTC022162"/>
+</part>
+<part name="J7" library="Livestream" deviceset="HEADER" device="">
+<attribute name="PARTNO" value="OSTTC022162"/>
+</part>
+<part name="J8" library="Livestream" deviceset="HEADER" device="">
+<attribute name="PARTNO" value="OSTTC022162"/>
+</part>
 <part name="\VAL5" library="supply2" deviceset="VCC" device="" value="VCC24V"/>
-<part name="Q6" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV"/>
-<part name="Q5" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV"/>
-<part name="Q8" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV"/>
-<part name="Q7" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV"/>
+<part name="Q6" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV">
+<attribute name="PARTNO" value="FQP13N10L"/>
+</part>
+<part name="Q5" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV">
+<attribute name="PARTNO" value="FQP13N10L"/>
+</part>
+<part name="Q8" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV">
+<attribute name="PARTNO" value="FQP13N10L"/>
+</part>
+<part name="Q7" library="transistor-power" deviceset="PMOSFET_N" device="TO220BV">
+<attribute name="PARTNO" value="FQP13N10L"/>
+</part>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
-<part name="R2" library="SparkFun-Connectors" deviceset="M10" device="LOCK"/>
+<part name="R2" library="SparkFun-Connectors" deviceset="M10" device="LOCK" value="1K">
+<attribute name="PARTNO" value="4609X-101-102LF"/>
+</part>
 <part name="\VAL6" library="supply2" deviceset="VCC" device="" value="VCC"/>
 <part name="LED1" library="adafruit" deviceset="LED" device="5MM"/>
 <part name="LED2" library="adafruit" deviceset="LED" device="5MM"/>
@@ -3744,22 +3827,40 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <part name="LED6" library="adafruit" deviceset="LED" device="5MM"/>
 <part name="LED7" library="adafruit" deviceset="LED" device="5MM"/>
 <part name="LED8" library="adafruit" deviceset="LED" device="5MM"/>
-<part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="PTH" value="0.33uF"/>
-<part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="PTH" value="0.1uF"/>
+<part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="PTH" value="0.33uF">
+<attribute name="PARTNO" value="FK24X7R1H334K"/>
+</part>
+<part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="PTH" value="0.1uF">
+<attribute name="PARTNO" value="SR295E104MAR"/>
+</part>
 <part name="\VAL7" library="supply2" deviceset="VCC" device="" value="VCC24V"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
 <part name="\VAL8" library="supply2" deviceset="VCC" device="" value="VCC"/>
-<part name="IC2" library="linear" deviceset="78*" device="TV" technology="8"/>
+<part name="IC2" library="linear" deviceset="78*" device="TV" technology="8" value="7805">
+<attribute name="PARTNO" value="NCP7805TG"/>
+</part>
+<part name="BOM-ENTRY1" library="bom" deviceset="BOM-ENTRY" device="" value="PSU">
+<attribute name="PARTNO" value="PSA-60W-240"/>
+</part>
+<part name="BOM-ENTRY2" library="bom" deviceset="BOM-ENTRY" device="" value="LEDs"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="J1" gate="G$1" x="-27.94" y="124.46"/>
-<instance part="J2" gate="G$1" x="-27.94" y="114.3"/>
-<instance part="J3" gate="G$1" x="-27.94" y="96.52"/>
-<instance part="J4" gate="G$1" x="-27.94" y="86.36"/>
+<instance part="J1" gate="G$1" x="-27.94" y="124.46">
+<attribute name="PARTNO" x="-27.94" y="124.46" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J2" gate="G$1" x="-27.94" y="114.3">
+<attribute name="PARTNO" x="-27.94" y="114.3" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J3" gate="G$1" x="-27.94" y="96.52">
+<attribute name="PARTNO" x="-27.94" y="96.52" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J4" gate="G$1" x="-27.94" y="86.36">
+<attribute name="PARTNO" x="-27.94" y="86.36" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="\VAL" gate="G$1" x="-12.7" y="134.62"/>
 <instance part="IC5" gate="A" x="-38.1" y="165.1">
 <attribute name="PARTNO" x="-38.1" y="165.1" size="1.778" layer="96" display="off"/>
@@ -3771,40 +3872,76 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="C1" gate="G$1" x="-10.16" y="165.1">
 <attribute name="PARTNO" x="-10.16" y="165.1" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="JP3" gate="G$1" x="-60.96" y="119.38"/>
-<instance part="JP1" gate="G$1" x="-48.26" y="93.98" rot="R180"/>
+<instance part="JP3" gate="G$1" x="-60.96" y="119.38">
+<attribute name="PARTNO" x="-60.96" y="119.38" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="JP1" gate="G$1" x="-48.26" y="93.98" rot="R180">
+<attribute name="PARTNO" x="-48.26" y="93.98" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="SUPPLY6" gate="GND" x="-66.04" y="83.82"/>
-<instance part="J11" gate="G$1" x="-53.34" y="205.74"/>
+<instance part="J11" gate="G$1" x="-53.34" y="205.74">
+<attribute name="PARTNO" x="-53.34" y="205.74" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="\VAL3" gate="G$1" x="-45.72" y="223.52"/>
 <instance part="SUPPLY2" gate="GND" x="-45.72" y="203.2"/>
 <instance part="J9" gate="G$1" x="-22.86" y="220.98">
 <attribute name="DNP" x="-22.86" y="220.98" size="1.4224" layer="96" display="off"/>
+<attribute name="PARTNO" x="-22.86" y="220.98" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="J10" gate="G$1" x="-22.86" y="208.28">
 <attribute name="DNP" x="-22.86" y="208.28" size="1.4224" layer="96" display="off"/>
+<attribute name="PARTNO" x="-22.86" y="208.28" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="\VAL4" gate="G$1" x="-10.16" y="228.6"/>
 <instance part="SUPPLY7" gate="GND" x="-7.62" y="203.2"/>
-<instance part="R1" gate="G$1" x="25.4" y="157.48" rot="R180"/>
+<instance part="R1" gate="G$1" x="25.4" y="157.48" rot="R180">
+<attribute name="PARTNO" x="25.4" y="157.48" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="SUPPLY3" gate="GND" x="0" y="170.18"/>
-<instance part="Q2" gate="G$1" x="7.62" y="109.22"/>
-<instance part="Q1" gate="G$1" x="22.86" y="109.22"/>
-<instance part="Q4" gate="G$1" x="7.62" y="81.28"/>
-<instance part="Q3" gate="G$1" x="22.86" y="81.28"/>
+<instance part="Q2" gate="G$1" x="7.62" y="109.22">
+<attribute name="PARTNO" x="7.62" y="109.22" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="Q1" gate="G$1" x="22.86" y="109.22">
+<attribute name="PARTNO" x="22.86" y="109.22" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="Q4" gate="G$1" x="7.62" y="81.28">
+<attribute name="PARTNO" x="7.62" y="81.28" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="Q3" gate="G$1" x="22.86" y="81.28">
+<attribute name="PARTNO" x="22.86" y="81.28" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="SUPPLY8" gate="GND" x="17.78" y="96.52"/>
 <instance part="SUPPLY1" gate="GND" x="17.78" y="68.58"/>
-<instance part="J5" gate="G$1" x="35.56" y="124.46"/>
-<instance part="J6" gate="G$1" x="35.56" y="114.3"/>
-<instance part="J7" gate="G$1" x="35.56" y="96.52"/>
-<instance part="J8" gate="G$1" x="35.56" y="86.36"/>
+<instance part="J5" gate="G$1" x="35.56" y="124.46">
+<attribute name="PARTNO" x="35.56" y="124.46" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J6" gate="G$1" x="35.56" y="114.3">
+<attribute name="PARTNO" x="35.56" y="114.3" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J7" gate="G$1" x="35.56" y="96.52">
+<attribute name="PARTNO" x="35.56" y="96.52" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J8" gate="G$1" x="35.56" y="86.36">
+<attribute name="PARTNO" x="35.56" y="86.36" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="\VAL5" gate="G$1" x="50.8" y="134.62"/>
-<instance part="Q6" gate="G$1" x="71.12" y="109.22"/>
-<instance part="Q5" gate="G$1" x="86.36" y="109.22"/>
-<instance part="Q8" gate="G$1" x="71.12" y="81.28"/>
-<instance part="Q7" gate="G$1" x="86.36" y="81.28"/>
+<instance part="Q6" gate="G$1" x="71.12" y="109.22">
+<attribute name="PARTNO" x="71.12" y="109.22" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="Q5" gate="G$1" x="86.36" y="109.22">
+<attribute name="PARTNO" x="86.36" y="109.22" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="Q8" gate="G$1" x="71.12" y="81.28">
+<attribute name="PARTNO" x="71.12" y="81.28" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="Q7" gate="G$1" x="86.36" y="81.28">
+<attribute name="PARTNO" x="86.36" y="81.28" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="SUPPLY9" gate="GND" x="81.28" y="96.52"/>
 <instance part="SUPPLY10" gate="GND" x="81.28" y="68.58"/>
-<instance part="R2" gate="G$1" x="86.36" y="162.56" rot="R180"/>
+<instance part="R2" gate="G$1" x="86.36" y="162.56" rot="R180">
+<attribute name="PARTNO" x="86.36" y="162.56" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="\VAL6" gate="G$1" x="71.12" y="187.96"/>
 <instance part="LED1" gate="G$1" x="58.42" y="185.42" rot="R270"/>
 <instance part="LED2" gate="G$1" x="58.42" y="180.34" rot="R270"/>
@@ -3814,12 +3951,20 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="LED6" gate="G$1" x="58.42" y="160.02" rot="R270"/>
 <instance part="LED7" gate="G$1" x="58.42" y="154.94" rot="R270"/>
 <instance part="LED8" gate="G$1" x="58.42" y="149.86" rot="R270"/>
-<instance part="C2" gate="G$1" x="10.16" y="213.36"/>
-<instance part="C3" gate="G$1" x="35.56" y="213.36"/>
+<instance part="C2" gate="G$1" x="10.16" y="213.36">
+<attribute name="PARTNO" x="10.16" y="213.36" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="C3" gate="G$1" x="35.56" y="213.36">
+<attribute name="PARTNO" x="35.56" y="213.36" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="\VAL7" gate="G$1" x="10.16" y="228.6"/>
 <instance part="SUPPLY11" gate="GND" x="22.86" y="203.2"/>
 <instance part="\VAL8" gate="G$1" x="35.56" y="228.6"/>
-<instance part="IC2" gate="A1" x="22.86" y="220.98"/>
+<instance part="IC2" gate="A1" x="22.86" y="220.98">
+<attribute name="PARTNO" x="22.86" y="220.98" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="BOM-ENTRY1" gate="G$1" x="-66.04" y="195.58"/>
+<instance part="BOM-ENTRY2" gate="G$1" x="45.72" y="195.58"/>
 </instances>
 <busses>
 </busses>
